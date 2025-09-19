@@ -1,0 +1,742 @@
+@import "tailwindcss";
+
+/* ============================================
+   THEME COLOR VARIABLES
+   ============================================ */
+
+:root {
+  /* Primary Colors */
+  --primary-50: #f0f9ff;
+  --primary-100: #e0f2fe;
+  --primary-200: #bae6fd;
+  --primary-300: #7dd3fc;
+  --primary-400: #38bdf8;
+  --primary-500: #0ea5e9;
+  --primary-600: #0284c7;
+  --primary-700: #0369a1;
+  --primary-800: #075985;
+  --primary-900: #0c4a6e;
+  --primary-950: #082f49;
+
+  /* Secondary Colors */
+  --secondary-50: #fdf4ff;
+  --secondary-100: #fae8ff;
+  --secondary-200: #f5d0fe;
+  --secondary-300: #f0abfc;
+  --secondary-400: #e879f9;
+  --secondary-500: #d946ef;
+  --secondary-600: #c026d3;
+  --secondary-700: #a21caf;
+  --secondary-800: #86198f;
+  --secondary-900: #701a75;
+  --secondary-950: #4a044e;
+
+  /* Code Rain Animation Variables */
+  --code-rain-speed: 4s;
+  --code-rain-opacity: 0.7;
+  --code-rain-blur: 0px;
+  --code-rain-color: #22c55e;
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Code Rain Animations */
+@keyframes fadeFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+}
+
+@keyframes floatDrift {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) translateX(-10px) scale(0.8);
+  }
+  15% {
+    opacity: 0.8;
+    transform: translateY(-10px) translateX(5px) scale(1);
+  }
+  85% {
+    opacity: 0.6;
+    transform: translateY(10px) translateX(-5px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px) translateX(10px) scale(0.9);
+  }
+}
+
+@keyframes codePulse {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+  }
+}
+
+@keyframes digitalRain {
+  0% {
+    opacity: 1;
+    transform: translateY(-100vh);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* ============================================
+   UTILITIES LAYER
+   ============================================ */
+
+@layer utilities {
+  /* Text stroke utility classes */
+  .text-stroke-0\.5 {
+    -webkit-text-stroke: 0.5px;
+    text-stroke: 0.5px;
+  }
+
+  .text-stroke-1 {
+    -webkit-text-stroke: 1px;
+    text-stroke: 1px;
+  }
+
+  .text-stroke-2 {
+    -webkit-text-stroke: 2px;
+    text-stroke: 2px;
+  }
+
+  /* Static text stroke colors */
+  .text-stroke-black {
+    -webkit-text-stroke-color: #000000;
+    text-stroke-color: #000000;
+  }
+
+  .text-stroke-gray-800 {
+    -webkit-text-stroke-color: #1f2937;
+    text-stroke-color: #1f2937;
+  }
+
+  .text-stroke-red-800 {
+    -webkit-text-stroke-color: #991b1b;
+    text-stroke-color: #991b1b;
+  }
+
+  /* Theme-based text stroke colors */
+  .text-stroke-primary {
+    -webkit-text-stroke-color: var(--primary-600);
+    text-stroke-color: var(--primary-600);
+  }
+
+  .text-stroke-secondary {
+    -webkit-text-stroke-color: var(--secondary-600);
+    text-stroke-color: var(--secondary-600);
+  }
+
+  /* Text glow effects */
+  .text-glow {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
+  }
+
+  .text-glow-primary {
+    filter: drop-shadow(0 0 2px rgba(var(--primary-400), 0.6));
+  }
+
+  .text-glow-secondary {
+    filter: drop-shadow(0 0 2px rgba(var(--secondary-400), 0.6));
+  }
+
+  /* Blur variations */
+  .blur-xs {
+    filter: blur(1px);
+  }
+
+  .blur-sm {
+    filter: blur(2px);
+  }
+
+  .blur-md {
+    filter: blur(4px);
+  }
+
+  .blur-lg {
+    filter: blur(8px);
+  }
+}
+
+/* ============================================
+   COMPONENTS LAYER
+   ============================================ */
+
+@layer components {
+  /* Navbar Elements */
+  .underline-animation {
+    @apply relative cursor-pointer font-semibold tracking-wide transition-all duration-300 ease-in-out;
+    position: relative;
+  }
+
+  .underline-animation::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-[2px] bg-white transition-all duration-300 ease-in-out;
+    width: 0;
+  }
+
+  .underline-animation:hover {
+    @apply scale-105 text-gray-500 drop-shadow-md;
+  }
+
+  .underline-animation:hover::after {
+    width: 100%;
+  }
+
+  /* Theme-colored underline animations */
+  .underline-animation-primary::after {
+    background-color: var(--primary-500);
+  }
+
+  .underline-animation-primary:hover {
+    color: var(--primary-700);
+  }
+
+  .underline-animation-secondary::after {
+    background-color: var(--secondary-500);
+  }
+
+  .underline-animation-secondary:hover {
+    color: var(--secondary-700);
+  }
+
+  /* Icon animations */
+  .animate-icon {
+    @apply opacity-0;
+    animation: slideUp 0.5s ease forwards;
+  }
+
+  .animate-icon-delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-icon-delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-icon-delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .animate-icon-delay-4 {
+    animation-delay: 0.4s;
+  }
+
+  .animate-icon-delay-5 {
+    animation-delay: 0.5s;
+  }
+
+  .animate-icon-delay-6 {
+    animation-delay: 0.6s;
+  }
+
+  .animate-icon-delay-7 {
+    animation-delay: 0.7s;
+  }
+
+  /* Logo animation */
+  .logo-animation {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  /* Fade animations */
+  .animate-fade-up {
+    animation: fadeUp 2.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  .animate-delay-1 {
+    animation-delay: 0.4s;
+  }
+
+  .animate-delay-2 {
+    animation-delay: 0.7s;
+  }
+
+  .animate-delay-3 {
+    animation-delay: 1s;
+  }
+
+  /* Hero Section Animations */
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out 0.3s both;
+  }
+
+  .card-animation {
+    animation: fadeInScale 1s ease-out 0.2s both;
+  }
+
+  .button-animation {
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+  }
+
+  .background-fade {
+    animation: fadeIn 1.2s ease-out 0.5s both;
+    opacity: 0;
+  }
+
+  .background-fade.image-loaded {
+    opacity: 0.4;
+  }
+
+  .scroll-indicator {
+    animation: fadeIn 1s ease-out 2s both;
+  }
+
+  .scroll-bounce {
+    animation: bounce 1.5s ease-in-out infinite;
+  }
+
+  .social-proof-animation {
+    animation: slideInFromLeft 1s ease-out 0.6s both;
+  }
+
+  /* Code Rain Animations */
+  .animate-fadeFloat {
+    animation: fadeFloat var(--code-rain-speed) ease-in-out forwards;
+    opacity: var(--code-rain-opacity);
+    filter: blur(var(--code-rain-blur));
+    color: var(--code-rain-color);
+  }
+
+  .animate-floatDrift {
+    animation: floatDrift 5s ease-in-out forwards;
+  }
+
+  .animate-codePulse {
+    animation: codePulse 2s ease-in-out infinite;
+  }
+
+  .animate-digitalRain {
+    animation: digitalRain 8s linear forwards;
+  }
+
+  .animate-glitch {
+    animation: glitch 0.3s ease-in-out infinite;
+  }
+
+  /* Buttons */
+
+  /* Text colors for themed elements */
+  .text-primary {
+    color: var(--primary-600);
+  }
+
+  .text-primary-light {
+    color: var(--primary-400);
+  }
+
+  .text-primary-dark {
+    color: var(--primary-800);
+  }
+
+  .text-secondary {
+    color: var(--secondary-600);
+  }
+
+  .text-secondary-light {
+    color: var(--secondary-400);
+  }
+
+  .text-secondary-dark {
+    color: var(--secondary-800);
+  }
+
+  /* Background colors for themed elements */
+  .bg-primary {
+    background-color: var(--primary-600);
+  }
+
+  .bg-primary-light {
+    background-color: var(--primary-200);
+  }
+
+  .bg-primary-dark {
+    background-color: var(--primary-800);
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary-600);
+  }
+
+  .bg-secondary-light {
+    background-color: var(--secondary-200);
+  }
+
+  .bg-secondary-dark {
+    background-color: var(--secondary-800);
+  }
+
+  /* Gradient text effects */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-rose {
+    background: linear-gradient(135deg, #fecdd3, #fda4af);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Hover effects */
+  .hover-scale {
+    transition: all 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+  }
+
+  .hover-scale:active {
+    transform: scale(0.98);
+  }
+
+  /* Loading states */
+  .loading-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Code Rain Container */
+  .code-rain-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Code snippet styling */
+  .code-snippet {
+    position: absolute;
+    font-family: "Fira Code", "Monaco", "Cascadia Code", monospace;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* Code snippet color variations */
+  .code-snippet-blue {
+    color: #3b82f6;
+  }
+
+  .code-snippet-purple {
+    color: #8b5cf6;
+  }
+
+  .code-snippet-orange {
+    color: #f59e0b;
+  }
+
+  .code-snippet-pink {
+    color: #ec4899;
+  }
+
+  .code-snippet-cyan {
+    color: #06b6d4;
+  }
+}
+
+/* ============================================
+   BACKGROUND EFFECTS
+   ============================================ */
+
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><rect width="1000" height="1000" fill="%23111827"/><g opacity="0.1"><circle cx="200" cy="200" r="100" fill="%23374151"/><circle cx="800" cy="300" r="150" fill="%23374151"/><circle cx="400" cy="700" r="120" fill="%23374151"/></g></svg>');
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.2s ease-out;
+}
+
+.backdrop-blur-fallback {
+  background-color: rgba(17, 24, 39, 0.8);
+}
+
+@supports (backdrop-filter: blur(12px)) {
+  .backdrop-blur-fallback {
+    background-color: rgba(17, 24, 39, 0.5);
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* ============================================
+   THEME VARIATIONS
+   ============================================ */
+
+/* Dark theme (default) */
+.theme-dark .code-snippet {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Light theme */
+.theme-light .code-snippet {
+  color: #374151;
+  text-shadow: none;
+}
+
+.theme-light .text-secondary {
+  color: #059669;
+}
+
+/* High contrast theme */
+.theme-high-contrast .code-snippet {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+.code-rain-container * {
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* ============================================
+   ACCESSIBILITY STYLES
+   ============================================ */
+
+.hover-scale:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .card-animation {
+    animation-delay: 0.1s;
+  }
+
+  .fade-in-up {
+    animation-delay: 0.2s;
+  }
+
+  .button-animation {
+    animation-delay: 0.5s;
+  }
+
+  .code-snippet {
+    font-size: 0.75rem;
+  }
+
+  .animate-fadeFloat {
+    animation-duration: 3s;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-snippet {
+    font-size: 0.6875rem;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up,
+  .card-animation,
+  .button-animation,
+  .background-fade,
+  .scroll-indicator,
+  .social-proof-animation,
+  .animate-fadeFloat,
+  .animate-floatDrift,
+  .animate-codePulse,
+  .animate-digitalRain,
+  .animate-glitch {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .scroll-bounce {
+    animation: none;
+  }
+
+  .hover-scale {
+    transition: none;
+  }
+
+  .code-snippet {
+    opacity: 0.3;
+    position: static;
+    transform: none;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .scroll-indicator,
+  .scroll-bounce,
+  .code-rain-container,
+  .code-snippet {
+    display: none;
+  }
+
+  .card-animation,
+  .fade-in-up,
+  .button-animation,
+  .background-fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
