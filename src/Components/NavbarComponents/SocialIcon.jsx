@@ -33,6 +33,7 @@ const SocialIcon = ({
         width: isHovered ? "90px" : "24px", //ANIMATION
         transition: "width 300ms ease",
         overflow: "hidden",
+        c,
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => false}
