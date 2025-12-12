@@ -35,6 +35,7 @@ const SocialIcon = ({
         overflow: "hidden",
       }}
       onMouseEnter={() => setIsHovered(true)}
+      aaga
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link
