@@ -41,6 +41,7 @@ const SocialIcon = ({
         to={linkTo}
         aria-label={ariaLabel}
         className="flex items-center h-6"
+        aha
       >
         {/* Original Icon - fades out on hover */}
         <div
