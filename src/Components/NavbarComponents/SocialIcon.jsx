@@ -44,7 +44,7 @@ const SocialIcon = ({
       >
         {/* Original Icon - fades out on hover */}
         <div
-          className={`absolute left-0 top-0 transition-opacity duration-300 `}
+          className={`absolute -0 top-0 transition-opacity duration-300 `}
           style={{ opacity: isHovered ? 0 : 1 }}
         >
           <img src={iconURL} alt={iconName} className="h-6 w-6" />
