@@ -36,6 +36,7 @@ const SocialIcon = ({
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      gsg
     >
       <Link
         to={linkTo}
