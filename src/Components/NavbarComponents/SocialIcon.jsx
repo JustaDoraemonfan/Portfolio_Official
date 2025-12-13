@@ -34,7 +34,7 @@ const SocialIcon = ({
         transition: "width 300ms ease",
         overflow: "hidden",
       }}
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={() => true}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link
