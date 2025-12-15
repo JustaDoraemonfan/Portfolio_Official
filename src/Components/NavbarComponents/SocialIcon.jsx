@@ -37,11 +37,7 @@ const SocialIcon = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link
-        to={linkTo}
-        aria-label={ariaLabel}
-        className="flex items-center h-6"
-      >
+      <Link to={linkTo} aria-label={ariaLabel} className="flex items- h-6">
         {/* Original Icon - fades out on hover */}
         <div
           className={`absolute left-0 top-0 transition-opacity duration-300 `}
