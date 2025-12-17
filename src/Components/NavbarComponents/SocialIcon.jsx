@@ -31,7 +31,7 @@ const SocialIcon = ({
       className={`animate-icon relative ${delayClass}`}
       style={{
         width: isHovered ? "90px" : "24px", //ANIMATION
-        transition: " 300ms ease",
+        transition: "width 300ms ease",
         overflow: "hidden",
       }}
       onMouseEnter={() => setIsHovered(true)}
