@@ -30,7 +30,7 @@ const SocialIcon = ({
     <div
       className={`animate-icon relative ${delayClass}`}
       style={{
-        width: isHovered ? "90px" : "24px", //ANIMATION
+        width: isHovered ? "90px" : "", //ANIMATION
         transition: "width 300ms ease",
         overflow: "hidden",
       }}
