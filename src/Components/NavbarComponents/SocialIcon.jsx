@@ -28,7 +28,7 @@ const SocialIcon = ({
 
   return (
     <div
-      className={`animate- relative ${delayClass}`}
+      className={`animate-icon relative ${delayClass}`}
       style={{
         width: isHovered ? "90px" : "24px", //ANIMATION
         transition: "width 300ms ease",
