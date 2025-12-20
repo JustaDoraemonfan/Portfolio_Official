@@ -52,6 +52,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
           text: getRandomSnippet(),
           style,
         },
+        afa,
       ]);
     }, 800); // slightly slower spawn
 
