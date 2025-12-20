@@ -44,7 +44,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const style = getRandomStyles();
+      const style = getRandomSsatyles();
       setLines((prev) => [
         ...prev.slice(-12), // keep a few more for smoothness
         {
