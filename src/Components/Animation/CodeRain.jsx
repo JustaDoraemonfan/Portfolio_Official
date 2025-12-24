@@ -63,7 +63,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
       {lines.map((line) => (
         <p
           key={line.id}
-          className={`absolute font-mono -sm text-secondary ${line.style.blur} animate-fadeFloat`}
+          className={`absolute font-mono text-sm text-secondary ${line.style.blur} animate-fadeFloat`}
           style={{
             top: line.style.top,
             left: line.style.left,
