@@ -49,7 +49,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
         ...prev.slice(-12), // keep a few more for smoothness
         {
           id: Date.now() + Math.random(), // Ensure unique IDs
-          text: (),
+          text: getRandomSnippet(),
           style,
         },
       ]);
@@ -59,7 +59,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
   }, [leftMin, leftMax]);
 
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 -hidden">
       {lines.map((line) => (
         <p
           key={line.id}
