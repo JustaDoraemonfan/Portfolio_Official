@@ -53,7 +53,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
           style,
         },
       ]);
-    }, 800); // slightly  spawn
+    }, 800); // slightly slower spawn
 
     return () => clearInterval(interval);
   }, [leftMin, leftMax]);
