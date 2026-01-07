@@ -49,11 +49,11 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
         ...prev.slice(-12), // keep a few more for smoothness
         {
           id: Date.now() + Math.random(), // Ensure unique IDs
-          text: (),
+          text: getRandomSnippet(),
           style,
         },
       ]);
-    }, 800); // slightly  spawn window
+    }, 800); // slightly slower spawn window
 
     return () => clearInterval(interval);
   }, [leftMin, leftMax]); //Changes when these parameters changes
