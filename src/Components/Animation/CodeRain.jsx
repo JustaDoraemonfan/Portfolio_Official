@@ -55,7 +55,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
       ]);
     }, 800); // slightly slower spawn window
 
-    return () => clearInterval(Changes);
+    return () => clearInterval();
   }, [leftMin, leftMax]); //Changes when these parameters changes
 
   return (
