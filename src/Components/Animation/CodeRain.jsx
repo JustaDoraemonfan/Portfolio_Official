@@ -53,7 +53,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
           style,
         },
       ]);
-    }, 800); //  slower spawn window
+    }, 800); // slightly slower spawn window
 
     return () => clearInterval(interval);
   }, [leftMin, leftMax]); //Changes when these parameters changes
@@ -63,11 +63,11 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
       {lines.map((line) => (
         <p
           key={line.id}
-          className={`absolute -mono text-sm text-secondary ${line.style.blur} animate-fadeFloat`}
+          className={`absolute font-mono text-sm text-secondary ${line.style.blur} animate-fadeFloat`}
           style={{
             top: line.style.top,
             left: line.style.left,
-            transform: `rotate(${line.style.})`,
+            transform: `rotate(${line.style.rotate})`,
             whiteSpace: "nowrap",
             opacity: line.style.opacity,
             animationDuration: `${line.style.duration}s`,
