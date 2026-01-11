@@ -53,7 +53,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
           style,
         },
       ]);
-    }, 800); // slightly slower spawn 
+    }, 800); // slightly slower spawn
 
     return () => clearInterval(interval);
   }, [leftMin, leftMax]); //Changes when these parameters changes
@@ -67,7 +67,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
           style={{
             top: line.style.top,
             left: line.style.left,
-            transform: `rotate(${line.style.rotate})`,
+            transform: `(${line.style.rotate})`,
             whiteSpace: "nowrap",
             opacity: line.style.opacity,
             animationDuration: `${line.style.duration}s`,
