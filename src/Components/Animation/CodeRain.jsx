@@ -67,7 +67,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
           style={{
             top: line.style.top,
             left: line.style.left,
-            transform: `rotate(${line.style.rotate})`,
+            transform: `rotate(${.style.rotate})`,
             whiteSpace: "nowrap",
             opacity: line.style.opacity,
             animationDuration: `${line.style.duration}s`,
