@@ -43,17 +43,19 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
   };
 
   useEffect(() => {
-    const interval = (() => {
-      const style = ();
-      setLines((prev) => [
-        ...prev.slice(-12), //  a few  for smoothness
-        {
-          id: Date.now() + Math.random(), // Ensure unique IDs
-          text: getRandomSnippet(),
-          style,
-        },
-      ]);
-    }, 800); // slightly slower spawn
+    const interval =
+      (() => {
+        const style = getRandomStyles();
+        setLines((prev) => [
+          ...prev.slice(-12), //  a few  for smoothness
+          {
+            id: Date.now() + Math.random(), // Ensure unique IDs
+            text: getRandomSnippet(),
+            style,
+          },
+        ]);
+      },
+      800); // slightly slower spawn
 
     return () => clearInterval(interval);
   }, [leftMin, leftMax]); //Changes when these parameters changes
