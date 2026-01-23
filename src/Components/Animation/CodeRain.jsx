@@ -50,7 +50,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
           ...prev.slice(-12), // keep a few  for smoothness
           {
             id: Date.now() + Math.random(), // Ensure unique ID
-            text: getRandomSnippet(),
+            text: getRandomSnippet(), //Documentation changes
             style,
           },
         ]);
