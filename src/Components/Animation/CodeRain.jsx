@@ -58,7 +58,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
       800); // slightly slower spawn
 
     return () => clearInterval(interval);
-  }, [leftMin, leftMax]); //Changes when these  changes
+  }, [leftMin, leftMax]); //Changes when   changes
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
