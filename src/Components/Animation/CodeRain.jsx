@@ -52,7 +52,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
             id: Date.now() + Math.random(), // Ensure unique ID
             text: getRandomSnippet(),
             style,
-          },
+          }, //Changes
         ]);
       },
       800); // slightly slower spawn
