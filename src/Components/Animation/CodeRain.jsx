@@ -52,13 +52,13 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
             id: Date.now() + Math.random(), // Ensure unique ID
             text: getRandomSnippet(),
             style,
-          }, //Changes
+          },
         ]);
       },
       800); // slightly slower spawn
 
     return () => clearInterval(interval);
-  }, [leftMin, leftMax]); //Changes when these parameters changes for useeffect
+  }, [leftMin, leftMax]); //Changes when these parameters changes
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
