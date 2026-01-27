@@ -61,7 +61,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
   }, [leftMin, leftMax]); //Changes when these parameters changes
 
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">// Class
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {lines.map((line) => (
         <p
           key={line.id}
