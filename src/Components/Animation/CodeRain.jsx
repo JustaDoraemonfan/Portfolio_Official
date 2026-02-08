@@ -55,7 +55,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
           },
         ]);
       },
-      800); // slightly slower spa
+      800); // slightly slower
 
     return () => clearInterval(interval);
   }, [leftMin, leftMax]); //Changes when these parameters changes
