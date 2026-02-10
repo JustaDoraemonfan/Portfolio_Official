@@ -54,7 +54,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
             style,
           },
         ]);
-      }
+      },
       800);
 
     return () => clearInterval(interval);
