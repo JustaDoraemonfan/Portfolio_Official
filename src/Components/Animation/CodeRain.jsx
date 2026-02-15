@@ -47,7 +47,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
       (() => {
         const style = getRandomStyles();
         setLines((prev) => [
-          ...prev.slice(-12), // Some
+          ...prev.slice(-12),
           {
             id: Date.now() + Math.random(),
             text: getRandomSnippet(),
