@@ -38,6 +38,7 @@ const CodeRain = ({ leftMin = 60, leftMax = 95 }) => {
     const blur = Math.random() > 0.7 ? "blur-sm" : "";
     const opacity = Math.random() * 0.6 + 0.4; // Random opacity between 0.4 and 1
     const duration = Math.random() * 3 + 2;
+    s;
 
     return { top, left, rotate, blur, opacity, duration };
   };
