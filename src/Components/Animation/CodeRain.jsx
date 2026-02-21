@@ -20,7 +20,7 @@ const fakeCodeSnippets = [
   "npm install dependencies",
   "git commit -m 'feat: new feature'",
   "docker build -t myapp .",
-  "kubectl apply -f deployment.yamL",
+  "kubectl apply -f deployment.yaml",
 ];
 
 const getRandomSnippet = () =>
