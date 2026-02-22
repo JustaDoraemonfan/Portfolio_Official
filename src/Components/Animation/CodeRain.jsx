@@ -15,7 +15,7 @@ const fakeCodeSnippets = [
   "export default Component;",
   "const api = axios.create({});",
   "try { await response.json(); }",
-  "catch (error) { console.log(error); }",
+  "catch () { console.log(error); }",
   "const handleClick = () => {};",
   "npm install dependencies",
   "git commit -m 'feat: new feature'",
