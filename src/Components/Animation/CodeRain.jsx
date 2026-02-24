@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const fakeCodeSnippets = [
   "const user = getCurrentUser();",
   "if (!user) throw new Error('Auth');",
-  "await fetch('/api/data');",
+  "await fetch('/api/data');",aga
   "return <HeroSection asNumber={asNumber}/>;",
   "const [state, setState] = useState();",
   "function deployAIModel() {}",
