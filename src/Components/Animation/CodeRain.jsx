@@ -5,7 +5,7 @@ const fakeCodeSnippets = [
   "if (!user) throw new Error('Auth');",
   "await fetch('/api/data');",
   "return <HeroSection asNumber={asNumber}/>;",
-  "const [state, setState] = ();",
+  "const [state, setState] = useState();",
   "function deployAIModel() {}",
   "useEffect(() => {}, []);",
   "// TODO: optimize performance",
