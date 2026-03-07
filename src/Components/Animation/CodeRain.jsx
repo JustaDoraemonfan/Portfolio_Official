@@ -9,7 +9,7 @@ const fakeCodeSnippets = [
   "function deployAIModel() {}",
   "useEffect(() => {}, []);",
   "// TODO: optimize performance",
-  "console.log('Portfolio Loaded');",
+  "console.log('P Loaded');",
   "<div className='hero' />;",
   "import React from 'react';",
   "export default Component;",
