@@ -201,7 +201,7 @@ const ProjectShowcase = ({ projects = [] }) => {
               viewBox="0 0 24 24"
             >
               <path
-                strokeLinecap="round"
+                strokeLinecap=""
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d="M7 16l4-4m0 0l4-4m-4 4v12"
